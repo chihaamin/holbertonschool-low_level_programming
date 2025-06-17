@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * prints a text followed by newline
- * Return: Always 0 (Success)
+ * Return: Always 0(Success)
  */
 int main(void)
 {
