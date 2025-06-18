@@ -23,30 +23,30 @@ int main(void)
 			putchar('B');
 			putchar('u');
 			putchar('z');
-			putchar('\n');
+			putchar(' ');
 		}
 		else if (i % 3 == 0)
 		{
 			putchar('F');
 			putchar('i');
 			putchar('z');
-			putchar('\n');
+			putchar(' ');
 		}
 		else if (i % 5 == 0)
 		{
 			putchar('B');
 			putchar('u');
 			putchar('z');
-			putchar('\n');
+			putchar(' ');
 		}
 		else
 		{
 			if (i >= 10)
 				putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
-			putchar('\n');
+			putchar(' ');
 		}
 	}
-
+	putchar('\n');
 	return (0);
 }
