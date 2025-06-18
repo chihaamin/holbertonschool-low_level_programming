@@ -24,7 +24,6 @@ int main(void)
 			putchar('u');
 			putchar('z');
 			putchar('z');
-			putchar(' ');
 		}
 		else if (i % 3 == 0)
 		{
@@ -32,7 +31,6 @@ int main(void)
 			putchar('i');
 			putchar('z');
 			putchar('z');
-			putchar(' ');
 		}
 		else if (i % 5 == 0)
 		{
@@ -40,15 +38,14 @@ int main(void)
 			putchar('u');
 			putchar('z');
 			putchar('z');
-			putchar(' ');
 		}
 		else
 		{
 			if (i >= 10)
 				putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
-			putchar(' ');
 		}
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
