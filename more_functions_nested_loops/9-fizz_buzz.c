@@ -23,6 +23,7 @@ int main(void)
 			putchar('B');
 			putchar('u');
 			putchar('z');
+			putchar('z');
 			putchar(' ');
 		}
 		else if (i % 3 == 0)
@@ -30,12 +31,14 @@ int main(void)
 			putchar('F');
 			putchar('i');
 			putchar('z');
+			putchar('z');
 			putchar(' ');
 		}
 		else if (i % 5 == 0)
 		{
 			putchar('B');
 			putchar('u');
+			putchar('z');
 			putchar('z');
 			putchar(' ');
 		}
