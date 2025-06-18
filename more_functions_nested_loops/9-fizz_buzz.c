@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - prints the numbers from 1 to 100, but for multiples of 3
  *        prints "Fizz" instead of the number and for the multiples of 5
@@ -16,35 +16,35 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('\n');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('z');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('\n');
 		}
 		else if (i % 3 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('\n');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('\n');
 		}
 		else if (i % 5 == 0)
 		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('\n');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('\n');
 		}
 		else
 		{
 			if (i >= 10)
-				_putchar((i / 10) + '0');
-			_putchar((i % 10) + '0');
-			_putchar('\n');
+				putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
+			putchar('\n');
 		}
 	}
 
