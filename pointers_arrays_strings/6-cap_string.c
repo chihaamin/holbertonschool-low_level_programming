@@ -7,7 +7,6 @@
 char *cap_string(char *s)
 {
 	int i;
-	char separators[] = " \t\n,;.!?\"(){}";
 	int is_separator = 1;
 
 	for (i = 0; s[i] != '\0'; i++)
