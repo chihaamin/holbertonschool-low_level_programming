@@ -1,6 +1,7 @@
 
 ## Contents:
 
+### 0x01
 
 > #### 0-reset_to_98.c:
 > *A function that takes a pointer to an int as parameter and updates the value it points to to 98.*
@@ -35,6 +36,8 @@
 > #### 100-atoi.c:
 > *A function that convert a string to an integer.*
 
+## 0x02
+
 > #### 0-strcat.c:
 >*A function that concatenates two strings.*
 
@@ -58,4 +61,30 @@
 
 > #### 7-leet.c:
 >*A function that encodes a string into 1337.*
+
+## 0x03
+
+> #### 0-memset.c:
+>*A function that fills memory with a constant byte.*
+
+> #### 1-memcpy.c:
+>*A function that copies memory area.*
+
+> #### 2-strchr.c:
+>*A function that locates a character in a string.*
+
+> #### 3-strspn.c:
+>*A function that gets the length of a prefix substring.*
+
+> #### 4-strpbrk.c:
+>*A function that searches a string for any of a set of bytes.*
+
+> #### 5-strstr.c:
+>*A function that locates a substring.*
+
+> #### 7-print_chessboard.c:
+>*A function that prints the chessboard.*
+
+> #### 8-print_diagsums.c:
+>*A function that prints the sum of the two diagonals of a square matrix of integers.*
 
