@@ -2,6 +2,12 @@
 
 ### Contents:
 
+#### **_putchar.c**:
+- *A function that **prints** a string.*
+
+#### **main.h**:
+- *A header file that contain prototypes.*
+
 #### **0-puts_recursion.c**:
 - *A function that **prints** a string, followed by a new line.*
 
