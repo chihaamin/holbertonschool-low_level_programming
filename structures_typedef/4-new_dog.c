@@ -21,6 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name_copy == NULL)
 	{
 		free(newDog);
+		newDog = NULL;
 		return (NULL);
 	}
 	for (i = 0; name[i] != '\0'; i++)
@@ -32,11 +33,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(name_copy);
 		free(newDog);
+		name_copy = NULL;
+		newDog = NULL;
 		return (NULL);
 	}
 	for (j = 0; owner[j] != '\0'; j++)
-		name_copy[j] = owner[j];
-	name_copy[j] = '\0';
+		owner_copy[j] = owner[j];
+	owner_copy[j] = '\0';
 
 	newDog->name = name_copy;
 	newDog->age = age;
