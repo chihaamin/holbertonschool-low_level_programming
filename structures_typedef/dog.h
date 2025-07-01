@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * struct dog - Dog struct
+ * struct dog - Dog struct and type as dog_t
  * @name: Dog name
  * @age: Dog age
  * @owner: Dog owner
@@ -14,14 +14,14 @@
  * Description: A dog basic informations
  */
 
-struct dog
+typedef struct dog
 {
 	float age;
 
 	char *name;
 
 	char *owner;
-};
+} dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
