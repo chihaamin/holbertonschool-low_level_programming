@@ -13,7 +13,6 @@
  *
  * Description: A dog basic informations
  */
-
 typedef struct dog
 {
 	float age;
