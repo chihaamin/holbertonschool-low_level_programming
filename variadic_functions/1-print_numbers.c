@@ -16,7 +16,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		if (i > 0 && separator != NULL)
+		{
 			_putchar(*separator);
+			putchar(' ');
+		}
 		_putchar(va_arg(args, int) + '0');
 	}
 	va_end(args);
