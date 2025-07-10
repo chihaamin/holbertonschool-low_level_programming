@@ -20,5 +20,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		_putchar(va_arg(args, int) + '0');
 	}
 	va_end(args);
-	_putchar("\n");
+	_putchar('\n');
 }
