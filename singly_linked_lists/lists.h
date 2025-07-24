@@ -4,6 +4,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdlib.h>
+#include <stddef.h>
 
 int _putchar(char c);
 
