@@ -30,7 +30,6 @@ gcc -Wall -Werror -Wextra -pedantic [file_name].c -o [output_name]
 gcc -Wall -Werror -Wextra -pedantic *.c
 ```
 
----
 
 ## 📜 Program Descriptions and Usage
 
@@ -43,7 +42,6 @@ Prints the name of the program.
 # Output: ./0-whatsmyname
 ```
 
----
 
 ### `1-args.c`
 Prints the number of arguments passed to the program (excluding the program name).
@@ -54,7 +52,6 @@ Prints the number of arguments passed to the program (excluding the program name
 # Output: 3
 ```
 
----
 
 ### `2-args.c`
 Prints all arguments received by the program, one per line.
@@ -69,7 +66,6 @@ Prints all arguments received by the program, one per line.
 # C Programming
 ```
 
----
 
 ### `3-mul.c`
 Multiplies two numbers provided as command line arguments.
@@ -86,7 +82,6 @@ Multiplies two numbers provided as command line arguments.
 # Output: Error
 ```
 
----
 
 ### `4-add.c`
 Adds positive numbers provided as command line arguments.
@@ -102,7 +97,6 @@ Adds positive numbers provided as command line arguments.
 ./4-add 1 2a 3
 # Output: Error
 ```
-
 ---
 
 ## ✅ Key Features
@@ -113,7 +107,6 @@ Adds positive numbers provided as command line arguments.
 - Clean and readable code structure  
 - Comprehensive handling of edge cases
 
----
 
 ## 🧰 Requirements
 
