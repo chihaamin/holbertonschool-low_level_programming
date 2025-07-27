@@ -34,15 +34,10 @@ void close_file(int fd)
 
 /**
  * main - Copies the content of a file to another file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of command-line arguments.
  *
- * Return: 0 on success.
- *
- * Description: If the argument count is incorrect - exit code 97.
- *              If file_from does not exist or cannot be read - exit code 98.
- *              If file_to cannot be created or written to - exit code 99.
- *              If file_to or file_from cannot be closed - exit code 100.
+ * Return: 0 on success, or exits with an error code on failure.
  */
 int main(int argc, char *argv[])
 {
@@ -84,7 +79,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		if (write(fd_to, buffer, bytes_read) != bytes_read)
+		if (write(fd_to, buffer, bytes_read) == -1)
 		{
 			free(buffer);
 			close_file(fd_from);
