@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 
-	while ((bytes_read = read(fd_from, buffer, 1024)) > 0)
+	while ((bytes_read = read(fd_from, buffer, 1024)))
 	{
 		if (bytes_read == -1)
 		{
