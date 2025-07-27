@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0666);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		close_file(fd_from);
