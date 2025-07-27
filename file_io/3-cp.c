@@ -34,10 +34,15 @@ void close_file(int fd)
 
 /**
  * main - Copies the content of a file to another file.
- * @argc: The number of command-line arguments.
- * @argv: An array of command-line arguments.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Return: 0 on success, or exits with an error code on failure.
+ * Return: 0 on success.
+ *
+ * Description: If the argument count is incorrect - exit code 97.
+ *              If file_from does not exist or cannot be read - exit code 98.
+ *              If file_to cannot be created or written to - exit code 99.
+ *              If file_to or file_from cannot be closed - exit code 100.
  */
 int main(int argc, char *argv[])
 {
@@ -58,7 +63,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		close_file(fd_from);
@@ -68,8 +73,9 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 
-	while ((bytes_read = read(fd_from, buffer, 1024)))
+	while (1)
 	{
+		bytes_read = read(fd_from, buffer, 1024);
 		if (bytes_read == -1)
 		{
 			free(buffer);
@@ -87,6 +93,8 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
+		if (bytes_read < 1024)
+			break;
 	}
 
 	free(buffer);
