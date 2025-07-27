@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0666);
 	if (fd_to == -1)
 	{
 		close_file(fd_from);
@@ -73,9 +73,8 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 
-	while (1)
+	while (bytes_read = read(fd_from, buffer, 1024))
 	{
-		bytes_read = read(fd_from, buffer, 1024);
 		if (bytes_read == -1)
 		{
 			free(buffer);
