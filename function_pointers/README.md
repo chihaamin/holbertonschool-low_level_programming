@@ -1,44 +1,53 @@
-# Function Pointers and Simple Calculator in C
+## Function Pointers and Simple Calculator in C
 
-This project demonstrates the use of function pointers in C through practical examples, and implements a simple calculator that performs arithmetic operations using function pointers.
+This mini-project demonstrates the use of function pointers in C through practical examples, and implements a simple calculator that performs arithmetic operations using function pointers.
 
 ---
 
 ## 📁 Project Files
 
-### 🔧 Function Pointer Exercises
-
-| File Name           | Description                                 |
-|---------------------|---------------------------------------------|
-| `function_pointers.h` | Header file for function pointer exercises |
-| `0-print_name.c`      | Prints a name using a function pointer     |
-| `1-array_iterator.c`  | Executes a function on each array element  |
-| `2-int_index.c`       | Searches for an integer in an array        |
-| `_putchar.c`          | Custom character output function           |
-
----
-
-### ➕ Simple Calculator Program
-
-| File Name           | Description                                       |
-|---------------------|---------------------------------------------------|
-| `3-calc.h`          | Header file for calculator                        |
-| `3-op_functions.c`  | Arithmetic operation implementations              |
-| `3-get_op_func.c`   | Selects appropriate function based on operator    |
-| `3-main.c`          | Main calculator program                           |
+| File Name               | Description                                         |
+|-------------------------|-----------------------------------------------------|
+| `_putchar.c`            | Custom character output function                    |
+| `function_pointers.h`   | Header file for function pointer exercises          |
+| `0-print_name.c`        | Prints a name using a function pointer              |
+| `1-array_iterator.c`    | Executes a function on each array element           |
+| `2-int_index.c`         | Searches for an integer in an array                 |
+| `3-calc.h`              | Header file for calculator                          |
+| `3-op_functions.c`      | Arithmetic operation implementations                |
+| `3-get_op_func.c`       | Selects appropriate function based on operator      |
+| `3-main.c`              | Main calculator program                             |
 
 ---
 
-## 🔧 Function Descriptions
+## � Function Descriptions
 
-### Function Pointers
+### `int _putchar(char c)`
+Writes a character to stdout.
 
-#### `print_name`
-Prints a name using a function passed as an argument.  
-**Prototype:**
-```c
-void print_name(char *name, void (*f)(char *));
+### `void print_name(char *name, void (*f)(char *))`
+Prints a name using a function passed as an argument.
+
+### `void array_iterator(int *array, size_t size, void (*action)(int))`
+Executes a function on each element of an array.
+
+### `int int_index(int *array, int size, int (*cmp)(int))`
+Searches for an integer in an array using a comparison function.
+
+---
+
+## ⚙️ Compilation
+
+Compile all source files using:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o function_pointers
 ```
+
+---
+
+## 📄 Usage
+
+Each file demonstrates a specific function pointer or calculator operation. See source code comments for details and usage examples.
 
 #### `array_iterator`
 Executes a function on each element of an array.  

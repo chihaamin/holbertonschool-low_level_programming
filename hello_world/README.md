@@ -1,43 +1,48 @@
-# C Programming Basics: Hello World
+## C Programming Basics: Hello World
 
-This project contains fundamental C programs that demonstrate basic input/output operations, data type sizes, and shell scripts for compilation automation.
+This mini-project contains fundamental C programs that demonstrate basic input/output operations, data type sizes, and shell scripts for compilation automation.
 
 ---
 
 ## 📁 Project Files
 
-### 📦 C Programs
-
-| File Name    | Description                                 |
-|--------------|---------------------------------------------|
-| `4-puts.c`   | Prints a string using `puts`                |
-| `5-printf.c` | Prints formatted output using `printf`      |
-| `6-size.c`   | Prints sizes of various C data types        |
-
-### ⚙️ Compilation Scripts
-
-| Script Name     | Description                                      |
-|------------------|--------------------------------------------------|
-| `0-preprocessor` | Runs C preprocessor on a file                    |
-| `1-compiler`     | Compiles C file to object file                   |
-| `2-assembler`    | Generates assembly code from a C file            |
-| `3-name`         | Compiles C file and creates executable `cisfun`  |
+| File Name        | Description                                         |
+|------------------|-----------------------------------------------------|
+| `4-puts.c`       | Prints a string using `puts`                        |
+| `5-printf.c`     | Prints formatted output using `printf`              |
+| `6-size.c`       | Prints sizes of various C data types                |
+| `0-preprocessor` | Runs C preprocessor on a file                       |
+| `1-compiler`     | Compiles C file to object file                      |
+| `2-assembler`    | Generates assembly code from a C file               |
+| `3-name`         | Compiles C file and creates executable `cisfun`     |
 
 ---
 
-## 🔍 Program Descriptions
+## � Function Descriptions
 
-### 📝 `4-puts.c`
+### `int main(void)` in `4-puts.c`
 Prints a specific string using the `puts` function.
 
-```c
-#include <stdio.h>
-/**
- * main - Entry point
- * prints a text
- * Return: Always 0 (Success)
- */
-int main(void)
+### `int main(void)` in `5-printf.c`
+Prints a formatted string using the `printf` function.
+
+### `int main(void)` in `6-size.c`
+Prints the size of various C data types using `sizeof` and `printf`.
+
+---
+
+## ⚙️ Compilation
+
+Compile all source files using:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o hello_world
+```
+
+---
+
+## 📄 Usage
+
+Each file demonstrates a specific basic C operation. See source code comments for details and usage examples.
 {
     puts("\"Programming is like building a multilingual puzzle");
     return (0);

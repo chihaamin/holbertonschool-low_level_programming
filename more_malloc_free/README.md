@@ -1,43 +1,53 @@
-## C - More malloc, free
+## More malloc, free in C
 
-This project demonstrates advanced memory allocation techniques in C, focusing on proper memory management using `malloc`, `free`, and related functions.
+This mini-project demonstrates advanced memory allocation techniques in C, focusing on proper memory management using `malloc`, `free`, and related functions.
 
-### 📁 Project Files
+---
 
-| Filename | Description |
-|----------|-------------|
-| `0-malloc_checked.c` | Allocates memory using `malloc` with error checking |
-| `1-string_nconcat.c` | Concatenates two strings with limited bytes from second string |
-| `2-calloc.c` | Allocates memory for an array and initializes to zero |
-| `3-array_range.c` | Creates an array containing values from min to max |
-| `main.h` | Header file containing all function prototypes |
-| `_putchar.c` | Custom `putchar` implementation |
+## 📁 Project Files
 
-### 🔧 Function Descriptions
+| File Name              | Description                                         |
+|------------------------|-----------------------------------------------------|
+| `_putchar.c`           | Custom character output function                     |
+| `0-malloc_checked.c`   | Allocates memory using `malloc` with error checking  |
+| `1-string_nconcat.c`   | Concatenates two strings with limited bytes from second string |
+| `2-calloc.c`           | Allocates memory for an array and initializes to zero|
+| `3-array_range.c`      | Creates an array containing values from min to max   |
+| `main.h`               | Header file containing all function prototypes       |
 
-`void *malloc_checked(unsigned int b)`
+---
 
-Safely allocates memory.
+## � Function Descriptions
 
-- **Parameters:** 
-  -b: Number of bytes to allocate
+### `int _putchar(char c)`
+Writes a character to stdout.
 
-- **Returns:** Pointer to allocated memoryExits with `status 98` on failure
+### `void *malloc_checked(unsigned int b)`
+Safely allocates memory. Exits with status 98 on failure.
 
-`char *string_nconcat(char *s1, char *s2, unsigned int n)`
+### `char *string_nconcat(char *s1, char *s2, unsigned int n)`
+Concatenates s1 with up to n bytes of s2. Returns pointer to new string, or NULL on failure.
 
-Concatenates s1 with up to n bytes of s2.
+### `void *_calloc(unsigned int nmemb, unsigned int size)`
+Allocates memory for an array and initializes it to zero. Returns pointer to memory, or NULL on failure.
 
-- **Parameters:**
-  - `s1`: First string (treated as empty if `NULL`)
-  - `s2`: Second string (treated as empty if `NULL`)
-  - `n`: Maximum bytes from `s2` to use
+### `int *array_range(int min, int max)`
+Creates an array containing values from min to max. Returns pointer to array, or NULL on failure.
 
-- **Returns:**
-  - Pointer to new concatenated string `NULL` on allocation failure
+---
 
-`void *_calloc(unsigned int nmemb, unsigned int size)`
+## ⚙️ Compilation
 
+Compile all source files using:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o more_malloc_free
+```
+
+---
+
+## 📄 Usage
+
+Each file demonstrates a specific advanced memory allocation operation. See source code comments for details and usage examples.
 Allocates and initializes array memory to 0.
 
 - **Parameters:**

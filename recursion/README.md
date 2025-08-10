@@ -1,31 +1,59 @@
-## C - Recursion
+## Recursion in C
 
-### Contents:
+This mini-project demonstrates recursive techniques in C, including string printing, reversal, length calculation, factorial, power, square root, and prime number checking.
 
-#### **_putchar.c**:
-- *A function that **prints** a string.*
+---
 
-#### **main.h**:
-- *A **header** file that contain **prototypes**.*
+## 📁 Project Files
 
-#### **0-puts_recursion.c**:
-- *A function that **prints** a string, followed by a new line.*
+| File Name                | Description                                         |
+|--------------------------|-----------------------------------------------------|
+| `main.h`                 | Header file with function prototypes                |
+| `0-puts_recursion.c`     | Prints a string followed by a new line recursively  |
+| `1-print_rev_recursion.c`| Prints a string in reverse recursively              |
+| `2-strlen_recursion.c`   | Returns the length of a string recursively          |
+| `3-factorial.c`          | Returns the factorial of a given number recursively |
+| `4-pow_recursion.c`      | Returns the value of x raised to the power of y recursively |
+| `5-sqrt_recursion.c`     | Returns the natural square root of a number recursively |
+| `6-is_prime_number.c`    | Returns 1 if the input integer is a prime number, otherwise returns 0 recursively |
 
-#### **1-print_rev_recursion.c**:
-- *A function that **prints** a string in **reverse**.*
+---
 
-#### **2-strlen_recursion.c**:
-- *A function that **returns** the **length** of a string.*
+## 🛠 Function Descriptions
 
-#### **3-factorial.c**:
-- *A function that **returns** the **factorial** of a given number.*
+### `void _puts_recursion(char *s)`
+Prints a string followed by a new line recursively.
 
-#### **4-pow_recursion.c**:
-- *A function that **returns** the value of **x** raised to the power of **y**.*
+### `void _print_rev_recursion(char *s)`
+Prints a string in reverse recursively.
 
-#### **5-sqrt_recursion.c**:
-- *A function that **returns** the natural **square root** of a number.*
+### `int _strlen_recursion(char *s)`
+Returns the length of a string recursively.
 
-#### **6-is_prime_number.c**:
-- *A function that **returns 1** if the input integer is a ***prime number***, otherwise **return 0**.*
+### `int factorial(int n)`
+Returns the factorial of a given number recursively.
+
+### `int _pow_recursion(int x, int y)`
+Returns the value of x raised to the power of y recursively.
+
+### `int _sqrt_recursion(int n)`
+Returns the natural square root of a number recursively.
+
+### `int is_prime_number(int n)`
+Returns 1 if the input integer is a prime number, otherwise returns 0 recursively.
+
+---
+
+## ⚙️ Compilation
+
+Compile all source files using:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o recursion
+```
+
+---
+
+## 📄 Usage
+
+Each file demonstrates a specific recursive operation. See source code comments for details and usage examples.
 

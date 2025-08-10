@@ -1,43 +1,61 @@
-# 🧠 Hash Tables Implementation in C
+## Hash Tables Implementation in C
 
-A complete and memory-safe implementation of hash tables in C. This project includes features such as dynamic sizing, efficient hashing, collision handling through chaining, and full CRUD support.
-
----
-
-## 📁 Project Structure
-
-| 📄 File                    | 🧩 Function             | 📌 Description                                                               |
-|---------------------------|------------------------|------------------------------------------------------------------------------|
-| `hash_tables.h`           | —                      | Header file with all data structures and function prototypes                 |
-| `0-hash_table_create.c`   | `hash_table_create`    | Initializes a new hash table with a given size                               |
-| `1-djb2.c`                | `hash_djb2`            | DJB2 hashing algorithm for string-based keys                                 |
-| `2-key_index.c`           | `key_index`            | Computes index in the array from a given key using DJB2                      |
-| `3-hash_table_set.c`      | `hash_table_set`       | Adds or updates a key-value pair in the table                                |
-| `4-hash_table_get.c`      | `hash_table_get`       | Retrieves the value linked to a specific key                                 |
-| `5-hash_table_print.c`    | `hash_table_print`     | Displays all key-value pairs in dictionary-style format                      |
-| `6-hash_table_delete.c`   | `hash_table_delete`    | Frees all allocated memory and deletes the table                             |
+This mini-project provides a complete and memory-safe implementation of hash tables in C, including dynamic sizing, efficient hashing, collision handling through chaining, and full CRUD support.
 
 ---
 
-## ✨ Key Features
+## 📁 Project Files
 
-- 🔢 **Dynamic Sizing** – User-defined table size at creation  
-- ⚙️ **DJB2 Hashing** – Efficient and well-distributed hashing algorithm  
-- 🔗 **Collision Handling** – Resolved via chaining (linked lists)  
-- 🧼 **Memory Safety** – Clean memory allocation/deallocation  
-- 🛠️ **Full CRUD** – Create, Read, Update, and Delete operations included  
+| File Name              | Description                                         |
+|------------------------|-----------------------------------------------------|
+| `hash_tables.h`        | Header file with all data structures and function prototypes |
+| `0-hash_table_create.c`| Initializes a new hash table with a given size      |
+| `1-djb2.c`             | Implements the DJB2 hashing algorithm               |
+| `2-key_index.c`        | Computes index in the array from a given key        |
+| `3-hash_table_set.c`   | Adds or updates a key-value pair in the table       |
+| `4-hash_table_get.c`   | Retrieves the value linked to a specific key        |
+| `5-hash_table_print.c` | Displays all key-value pairs in dictionary-style format |
+| `6-hash_table_delete.c`| Frees all allocated memory and deletes the table    |
 
 ---
 
-## 🧪 Compilation
+## 🛠 Function Descriptions
+
+### `hash_table_t *hash_table_create(unsigned long int size)`
+Creates a new hash table of the specified size.
+
+### `unsigned long int hash_djb2(const unsigned char *str)`
+Implements the DJB2 hashing algorithm for strings.
+
+### `unsigned long int key_index(const unsigned char *key, unsigned long int size)`
+Computes the index for a key in the hash table array.
+
+### `int hash_table_set(hash_table_t *ht, const char *key, const char *value)`
+Adds or updates a key-value pair in the hash table.
+
+### `char *hash_table_get(const hash_table_t *ht, const char *key)`
+Retrieves the value associated with a key.
+
+### `void hash_table_print(const hash_table_t *ht)`
+Prints all key-value pairs in the hash table.
+
+### `void hash_table_delete(hash_table_t *ht)`
+Deletes the hash table and frees all memory.
+
+---
+
+## ⚙️ Compilation
 
 Compile all source files using:
-
 ```bash
 gcc -Wall -Wextra -Werror -pedantic *.c -o hash_tables
 ```
 
-## 🚀 Quick Usage Example
+---
+
+## � Usage
+
+Each file demonstrates a specific hash table operation. See source code comments for details and usage examples.
 
 ```c
 #include "hash_tables.h"

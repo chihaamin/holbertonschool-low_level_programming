@@ -1,43 +1,57 @@
-# Dynamic Memory Allocation in C: C - malloc, free
+## Dynamic Memory Allocation in C
 
-This project demonstrates dynamic memory allocation techniques in C, including creating arrays, duplicating strings, concatenating strings, and managing 2D grids. The implementation focuses on proper memory management and error handling.
-
----
-
-## Project Files
-| File Name           | Description                               |
-|---------------------|-------------------------------------------|
-| 0-create_array.c    | Creates a character array initialized with a specific char |
-| 1-strdup.c          | Duplicates a string                       |
-| 2-str_concat.c      | Concatenates two strings                  |
-| 3-alloc_grid.c      | Creates a 2D grid of integers             |
-| 4-free_grid.c       | Frees memory allocated for a 2D grid      |
-| main.h              | Header file with function prototypes      |
-| _putchar.c          | Custom character output function          |
+This mini-project demonstrates dynamic memory allocation techniques in C, including creating arrays, duplicating strings, concatenating strings, and managing 2D grids. The implementation focuses on proper memory management and error handling.
 
 ---
 
-## Function Descriptions
+## 📁 Project Files
+
+| File Name           | Description                                         |
+|---------------------|-----------------------------------------------------|
+| `_putchar.c`        | Custom character output function                     |
+| `0-create_array.c`  | Creates a character array initialized with a specific char |
+| `1-strdup.c`        | Duplicates a string                                 |
+| `2-str_concat.c`    | Concatenates two strings                            |
+| `3-alloc_grid.c`    | Creates a 2D grid of integers                       |
+| `4-free_grid.c`     | Frees memory allocated for a 2D grid                |
+| `main.h`            | Header file with function prototypes                |
+
+---
+
+## 🛠 Function Descriptions
+
+### `int _putchar(char c)`
+Writes a character to stdout.
 
 ### `char *create_array(unsigned int size, char c)`
 Creates an array of characters and initializes it with a specific character.
 
-**Parameters:**
-- `size`: Size of the array
-- `c`: Character to initialize the array with
+### `char *_strdup(char *str)`
+Duplicates a string. Returns pointer to new string, or NULL on failure.
 
-**Returns:**
-- Pointer to the allocated array
-- NULL if size is 0 or memory allocation fails
+### `char *str_concat(char *s1, char *s2)`
+Concatenates two strings. Returns pointer to new string, or NULL on failure.
 
-```c
-char *arr = create_array(10, 'A');
-// Creates: "AAAAAAAAAA"
+### `int **alloc_grid(int width, int height)`
+Creates a 2D grid of integers. Returns pointer to grid, or NULL on failure.
+
+### `void free_grid(int **grid, int height)`
+Frees memory allocated for a 2D grid.
+
+---
+
+## ⚙️ Compilation
+
+Compile all source files using:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o malloc_free
 ```
 
 ---
 
-### `char *_strdup(char *str)`
+## 📄 Usage
+
+Each file demonstrates a specific dynamic memory allocation operation. See source code comments for details and usage examples.
 Duplicates a string.
 
 **Parameters:**

@@ -1,7 +1,6 @@
 ## More Functions, More Nested Loops in C
 This project demonstrates various C programming techniques using functions and nested loops, including character classification, number printing, pattern generation, and the classic FizzBuzz problem.
 
----
 
 ## Project Files
 | File Name              | Description                             |
@@ -20,9 +19,56 @@ This project demonstrates various C programming techniques using functions and n
 | _putchar.c             | Custom character output function         |
 | main.h                 | Header file with function prototypes     |
 
+
+## 🛠 Function Descriptions
+
+### `int _putchar(char c)`
+Writes a character to stdout.
+
+### `int _isupper(int c)`
+Checks for uppercase characters.
+
+### `int _isdigit(int c)`
+Checks for digits (0-9).
+
+### `int mul(int a, int b)`
+Multiplies two integers and returns the result.
+
+### `void print_numbers(void)`
+Prints numbers from 0 to 9.
+
+### `void print_most_numbers(void)`
+Prints numbers from 0 to 9, excluding 2 and 4.
+
+### `void more_numbers(void)`
+Prints numbers from 0 to 14 ten times.
+
+### `void print_line(int n)`
+Draws a straight line using underscores.
+
+### `void print_diagonal(int n)`
+Draws a diagonal line using backslashes.
+
+### `void print_square(int size)`
+Prints a square using '#' characters.
+
+### `void print_triangle(int size)`
+Prints a right-aligned triangle using '#' characters.
+
 ---
 
-## Key Features
+## ⚙️ Compilation
+
+Compile all source files using:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o more_functions_nested_loops
+```
+
+---
+
+## 📄 Usage
+
+Each file demonstrates a specific function or loop operation. See source code comments for details and usage examples.
 
 ### Character Classification
 - `_isupper()` verifies if a character is uppercase
